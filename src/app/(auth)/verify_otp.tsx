@@ -5,14 +5,15 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import ButtonComp from '@/src/components/atoms/ButtonComp';
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
 import OTPInput from "@codsod/react-native-otp-input";
-import { storage } from '@/src/utils/utils';
+import { storeData } from '@/src/utils/utils';
+
 
 const Verify_otp = () => {
 
   const [otp, setOTP] = useState("");
   const onPress =()=>{
     console.log(otp);
-    storage.set("access_token", "dkjhfskjdfhksj")
+    storeData.set("access_token", "dkjhfskjdfhksj");
   }
 
   return (
